@@ -13,7 +13,7 @@ body {
 
 /* Navigation */
 header {
-  background-color: #2C3E50;
+  background-color: #1a1a2e; /* Dark Navy Blue */
   padding: 20px;
   text-align: center;
 }
@@ -38,7 +38,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  color: #3498db;
+  color: #ff6f61; /* Soft Coral */
 }
 
 /* Home Section */
@@ -93,11 +93,6 @@ header nav ul li a:hover {
   margin-top: 20px;
 }
 
-/* Parallax Scrolling */
-.parallax {
-  background-attachment: fixed;
-}
-
 /* Resume Section */
 #resume {
   padding: 50px;
@@ -106,7 +101,7 @@ header nav ul li a:hover {
 }
 
 #resume button {
-  background-color: #3498db;
+  background-color: #ff6f61; /* Soft Coral */
   color: white;
   padding: 15px 30px;
   font-size: 1.1rem;
@@ -116,7 +111,7 @@ header nav ul li a:hover {
 }
 
 #resume button:hover {
-  background-color: #2980b9;
+  background-color: #1a1a2e; /* Dark Navy Blue */
 }
 
 /* Modal */
@@ -171,7 +166,7 @@ header nav ul li a:hover {
 }
 
 .lab a {
-  color: #3498db;
+  color: #ff6f61; /* Soft Coral */
   font-weight: bold;
   text-decoration: none;
 }
@@ -187,44 +182,35 @@ header nav ul li a:hover {
   text-align: center;
 }
 
-form input, form textarea {
-  width: 80%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
-form button {
-  background-color: #3498db;
-  color: white;
-  padding: 15px 30px;
-  font-size: 1.1rem;
-  border: none;
-  cursor: pointer;
+.social-link {
+  color: #333;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-form button:hover {
-  background-color: #2980b9;
+.social-link:hover {
+  color: #ff6f61; /* Soft Coral */
+  transform: translateY(-5px);
 }
 
 /* Footer */
 footer {
   padding: 20px;
-  background-color: #2C3E50;
+  background-color: #1a1a2e; /* Dark Navy Blue */
   color: white;
   text-align: center;
 }
 
-.social-icons a {
-  color: white;
-  margin: 0 10px;
-  font-size: 1.2rem;
-  text-decoration: none;
-}
-
-.social-icons a:hover {
-  color: #3498db;
+footer p {
+  font-size: 1rem;
+  margin: 0;
 }
 
 /* Responsive Design */
@@ -235,5 +221,10 @@ footer {
 
   #home .container {
       flex-direction: column;
+  }
+
+  .social-links {
+      flex-direction: column;
+      gap: 20px;
   }
 }
