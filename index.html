@@ -1,133 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kushal's E-Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Professional E-Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Kushal Patel</h1>
-    <p>Cybersecurity Enthusiast | Digital Investigator | Cloud Explorer</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#resume">Resume</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <!-- About Section -->
-  <section id="about">
-    <img src="kushal-photo.jpg" alt="Professional Photo" class="profile-pic">
-    <h2>About Me</h2>
-    <p>
-      I am a passionate and detail-oriented cybersecurity and cloud computing student, currently pursuing my degree in Computer Science. With hands-on experience in digital investigations, system hardening, and cloud provisioning, I aim to become a security analyst with a focus on proactive defense.
-    </p>
-    <p><strong>Career Goals:</strong> Become a Penetration Tester or Cloud Security Engineer</p>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="section">
+    <div class="home-content">
+      <img src="profile-photo.jpg" alt="Your Photo" class="profile-photo">
+      <h1>Welcome to My Professional E-Portfolio</h1>
+      <p class="tagline">Cybersecurity Enthusiast | Digital Investigator | Cloud Explorer</p>
+      <p>Hello! I'm Kushal, a passionate cybersecurity and cloud computing enthusiast with a strong background in digital forensics, networking, and penetration testing. I thrive on solving complex challenges and contributing to secure digital environments.</p>
+    </div>
   </section>
 
   <!-- Resume Section -->
-  <section id="resume">
+  <section id="resume" class="section">
     <h2>Resume</h2>
-    <button onclick="document.getElementById('resumeModal').style.display='block'">Open Resume</button>
+    <button id="resumeButton">Open Resume</button>
     <div id="resumeModal" class="modal">
-      <span class="close" onclick="document.getElementById('resumeModal').style.display='none'">&times;</span>
-      <iframe src="Kushal-Resume.pdf" width="100%" height="500px"></iframe>
+      <span class="close">&times;</span>
+      <iframe src="your-resume.pdf" width="100%" height="500px"></iframe>
     </div>
-    <div class="resume-sections">
+    <div class="resume-summary">
       <h3>Summary</h3>
-      <p>Security-focused student with experience in digital forensics, system provisioning, and penetration testing.</p>
+      <p>A highly motivated professional with expertise in network security, cloud infrastructure, and digital forensics...</p>
+    </div>
+    <div class="resume-details">
       <h3>Education</h3>
-      <p>Computer Science - Expected 2025</p>
+      <p>Bachelor of Science in Computer Science, University Name (Expected Graduation: 2024)</p>
       <h3>Work Experience</h3>
-      <p>Internship - Network Security Analyst at XYZ Corp (Jan 2024 - May 2024)</p>
+      <p>Intern at XYZ Company – Focused on network security analysis and penetration testing.</p>
       <h3>Certifications</h3>
-      <ul>
-        <li>CompTIA Security+</li>
-        <li>AWS Certified Cloud Practitioner</li>
-      </ul>
+      <p>CompTIA Security+, AWS Certified Solutions Architect</p>
       <h3>Skills</h3>
-      <p>Linux, Wireshark, Docker, Ansible, Python, Metasploit</p>
+      <ul>
+        <li>Technical Skills: Networking, Cloud Computing, Penetration Testing</li>
+        <li>Soft Skills: Communication, Teamwork, Problem-Solving</li>
+      </ul>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills">
+  <section id="skills" class="section">
     <h2>Skills</h2>
     <div class="skills-container">
-      <div><strong>Networking:</strong> Wireshark, TCPDump, Zeek</div>
-      <div><strong>Cloud:</strong> AWS, Docker, Kubernetes, Ansible</div>
-      <div><strong>Forensics:</strong> Autopsy, Volatility, FTK Imager</div>
-      <div><strong>Scripting:</strong> Python, Bash</div>
-      <div><strong>Security Tools:</strong> Metasploit, OpenVAS, Burp Suite</div>
+      <div class="skill">
+        <h4>Networking</h4>
+        <div class="skill-bar" style="width: 90%"></div>
+      </div>
+      <div class="skill">
+        <h4>Cloud Computing</h4>
+        <div class="skill-bar" style="width: 80%"></div>
+      </div>
+      <div class="skill">
+        <h4>Penetration Testing</h4>
+        <div class="skill-bar" style="width: 85%"></div>
+      </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects / Labs</h2>
-
+  <section id="projects" class="section">
+    <h2>Projects</h2>
     <div class="project">
-      <h3>Cloud Provisioning with Ansible & Docker</h3>
-      <p>Automated deployment of cloud services using Ansible playbooks and Docker containers on Ubuntu VMs.</p>
-      <p><strong>Tools:</strong> Ansible, Docker, GitHub</p>
+      <h3>Cloud Projects</h3>
+      <p>Tools/Technologies: Ansible, Docker, Kubernetes</p>
+      <p>Link: <a href="#">GitHub Link</a></p>
     </div>
-
     <div class="project">
-      <h3>Digital Forensics with Autopsy</h3>
-      <p>Performed forensic analysis on a disk image using Autopsy and generated investigation reports.</p>
-      <p><strong>Tools:</strong> Autopsy, FTK Imager</p>
+      <h3>Forensics Labs</h3>
+      <p>Tools/Technologies: Wireshark, Autopsy</p>
+      <p>Link: <a href="#">GitHub Link</a></p>
     </div>
-
     <div class="project">
-      <h3>Web Exploitation with Metasploit</h3>
-      <p>Exploited known vulnerabilities in Metasploitable2 using Metasploit and manual CVE lookups.</p>
-      <p><strong>Tools:</strong> Metasploit, Nmap</p>
+      <h3>Cybersecurity Work</h3>
+      <p>Tools/Technologies: OpenVAS, Metasploit, VPNs</p>
+      <p>Link: <a href="#">GitHub Link</a></p>
     </div>
   </section>
 
   <!-- Education Section -->
-  <section id="education">
+  <section id="education" class="section">
     <h2>Education</h2>
-    <p><strong>Institution:</strong> ABC University</p>
-    <p><strong>Program:</strong> BSc in Computer Science</p>
-    <p><strong>Courses:</strong> Network Security, Digital Forensics, Cloud Computing</p>
-    <p><strong>Graduation:</strong> 2025</p>
-  </section>
-
-  <!-- Certifications Section -->
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li>CompTIA Security+</li>
-      <li>AWS Certified Cloud Practitioner</li>
-      <li>Google Cybersecurity Certificate</li>
-    </ul>
+    <p>Bachelor of Science in Computer Science, University Name</p>
+    <p>Graduation: 2024</p>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
+  <section id="contact" class="section">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:kushal@example.com">kushal@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/kushal">github.com/kushal</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/kushal">linkedin.com/in/kushal</a></p>
+    <p>Email: kushal@example.com</p>
+    <p>GitHub: <a href="#">Your GitHub</a></p>
+    <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
+    <p>Resume: <a href="your-resume.pdf">Download Resume</a></p>
   </section>
 
-  <script>
-    window.onclick = function(event) {
-      const modal = document.getElementById("resumeModal");
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    };
-  </script>
+  <script src="script.js"></script>
+
 </body>
 </html>
