@@ -1,118 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Professional E-Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kushal's E-Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#labs">Database Labs</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Home Section -->
-  <section id="home" class="section">
-    <div class="home-content">
-      <img src="profile-photo.jpg" alt="Your Photo" class="profile-photo">
-      <h1>Welcome to My Professional E-Portfolio</h1>
-      <p class="tagline">Cybersecurity Enthusiast | Digital Investigator | Cloud Explorer</p>
-      <p>Hello! I'm Kushal, a passionate cybersecurity and cloud computing enthusiast with a strong background in digital forensics, networking, and penetration testing. I thrive on solving complex challenges and contributing to secure digital environments.</p>
-    </div>
-  </section>
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <div class="intro">
+                <h1>Kushal's E-Portfolio</h1>
+                <p class="headline">Cybersecurity Specialist | Data Analyst | Cloud & Forensics Enthusiast</p>
+                <p class="bio">I'm a dedicated cybersecurity and cloud computing enthusiast, with a strong focus on database management and data analytics. I’m passionate about exploring technologies like SQL, Splunk, and ELK to uncover insights and optimize systems.</p>
+            </div>
+            <div class="photo">
+                <img src="profile.jpg" alt="Kushal's Photo" />
+            </div>
+        </div>
+    </section>
 
-  <!-- Resume Section -->
-  <section id="resume" class="section">
-    <h2>Resume</h2>
-    <button id="resumeButton">Open Resume</button>
-    <div id="resumeModal" class="modal">
-      <span class="close">&times;</span>
-      <iframe src="your-resume.pdf" width="100%" height="500px"></iframe>
-    </div>
-    <div class="resume-summary">
-      <h3>Summary</h3>
-      <p>A highly motivated professional with expertise in network security, cloud infrastructure, and digital forensics...</p>
-    </div>
-    <div class="resume-details">
-      <h3>Education</h3>
-      <p>Bachelor of Science in Computer Science, University Name (Expected Graduation: 2024)</p>
-      <h3>Work Experience</h3>
-      <p>Intern at XYZ Company – Focused on network security analysis and penetration testing.</p>
-      <h3>Certifications</h3>
-      <p>CompTIA Security+, AWS Certified Solutions Architect</p>
-      <h3>Skills</h3>
-      <ul>
-        <li>Technical Skills: Networking, Cloud Computing, Penetration Testing</li>
-        <li>Soft Skills: Communication, Teamwork, Problem-Solving</li>
-      </ul>
-    </div>
-  </section>
+    <!-- Resume Section -->
+    <section id="resume">
+        <h2>Resume</h2>
+        <button id="resumeButton">View Resume</button>
+        <div id="resumeModal" class="modal">
+            <span class="close">&times;</span>
+            <iframe src="your-resume.pdf" width="100%" height="500px"></iframe>
+        </div>
+        <h3>Summary</h3>
+        <p>Experienced in Cybersecurity, Data Analytics, and Cloud Computing. Strong skills in database management with a focus on SQL, Splunk, and ELK stack. Proven track record in optimizing systems and uncovering data insights.</p>
+        <h3>Education</h3>
+        <p>Bachelor of Science in Computer Science, XYZ University, 2024</p>
+        <h3>Skills</h3>
+        <ul>
+            <li>SQL</li>
+            <li>Splunk</li>
+            <li>ELK Stack</li>
+            <li>Cloud Computing</li>
+            <li>Data Analytics</li>
+        </ul>
+    </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <div class="skills-container">
-      <div class="skill">
-        <h4>Networking</h4>
-        <div class="skill-bar" style="width: 90%"></div>
-      </div>
-      <div class="skill">
-        <h4>Cloud Computing</h4>
-        <div class="skill-bar" style="width: 80%"></div>
-      </div>
-      <div class="skill">
-        <h4>Penetration Testing</h4>
-        <div class="skill-bar" style="width: 85%"></div>
-      </div>
-    </div>
-  </section>
+    <!-- Database Labs Section -->
+    <section id="labs">
+        <h2>Database Labs</h2>
+        <div class="lab">
+            <h3>SQL Database Management</h3>
+            <p>Description: In this lab, I demonstrated the process of designing a relational database schema, writing SQL queries for data retrieval, and optimizing query performance.</p>
+            <p>Tools: SQL, MySQL</p>
+            <a href="SQL_Lab_Report.pdf" target="_blank">Download Lab Report</a>
+        </div>
+        <div class="lab">
+            <h3>Splunk Data Analysis</h3>
+            <p>Description: Learn how to analyze machine data with Splunk for monitoring and security. This lab covers log file analysis, creating dashboards, and detecting anomalies.</p>
+            <p>Tools: Splunk</p>
+            <a href="Splunk_Lab_Report.pdf" target="_blank">Download Lab Report</a>
+        </div>
+        <div class="lab">
+            <h3>ELK Stack Visualization</h3>
+            <p>Description: I explored Elasticsearch, Logstash, and Kibana (ELK Stack) for data aggregation and visualization. This lab showcases creating dashboards for data analysis.</p>
+            <p>Tools: ELK Stack</p>
+            <a href="ELK_Lab_Report.pdf" target="_blank">Download Lab Report</a>
+        </div>
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Cloud Projects</h3>
-      <p>Tools/Technologies: Ansible, Docker, Kubernetes</p>
-      <p>Link: <a href="#">GitHub Link</a></p>
-    </div>
-    <div class="project">
-      <h3>Forensics Labs</h3>
-      <p>Tools/Technologies: Wireshark, Autopsy</p>
-      <p>Link: <a href="#">GitHub Link</a></p>
-    </div>
-    <div class="project">
-      <h3>Cybersecurity Work</h3>
-      <p>Tools/Technologies: OpenVAS, Metasploit, VPNs</p>
-      <p>Link: <a href="#">GitHub Link</a></p>
-    </div>
-  </section>
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li>
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p>XYZ University, 2024</p>
+                <p>Relevant Coursework: Database Management, Cloud Computing, Cybersecurity</p>
+            </li>
+        </ul>
+    </section>
 
-  <!-- Education Section -->
-  <section id="education" class="section">
-    <h2>Education</h2>
-    <p>Bachelor of Science in Computer Science, University Name</p>
-    <p>Graduation: 2024</p>
-  </section>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <form action="submit_form.php" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p>Feel free to reach out for any inquiries or collaboration opportunities!</p>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: kushal@example.com</p>
-    <p>GitHub: <a href="#">Your GitHub</a></p>
-    <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
-    <p>Resume: <a href="your-resume.pdf">Download Resume</a></p>
-  </section>
+    <!-- Footer -->
+    <footer>
+        <p>Connect with me: <a href="https://linkedin.com/in/kushal">LinkedIn</a> | <a href="https://github.com/kushal">GitHub</a></p>
+    </footer>
 
-  <script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
