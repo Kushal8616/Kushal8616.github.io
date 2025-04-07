@@ -1,102 +1,491 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kushal's Professional E-Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kushal's E-Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      background-color: #0f0f0f;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      color: #ff6600;
+      letter-spacing: 1px;
+      margin: 0;
+      animation: fadeInName 1s ease-out;
+    }
+
+    @keyframes fadeInName {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header nav {
+      margin-top: 15px;
+    }
+
+    header nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.3rem;
+      margin: 0 15px;
+      padding: 10px;
+      transition: background-color 0.3s;
+      border-radius: 5px;
+    }
+
+    header nav a:hover {
+      background-color: #ff6600;
+      color: #ffffff;
+    }
+
+    section {
+      padding: 70px 20px;
+      transition: all 0.5s ease;
+    }
+
+    .section {
+      background-color: #1e1e1e;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      margin-bottom: 60px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .section:hover {
+      transform: scale(1.05);
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #ffcc00;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .section.fadeIn {
+      opacity: 0;
+      animation: fadeInAnimation 1s forwards;
+    }
+
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #about .profile-pic {
+      border-radius: 50%;
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    #about p {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      color: #dcdcdc;
+    }
+
+    #education p {
+      font-size: 1.3rem;
+      color: #dcdcdc;
+      margin: 10px 0;
+    }
+
+    #resume iframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+    }
+
+    #resume button {
+      padding: 15px 30px;
+      background-color: #ffcc00;
+      color: white;
+      font-size: 1.3rem;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    #resume button:hover {
+      background-color: #cc5200;
+    }
+
+    #work-experience {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .job h4 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #ffcc00;
+    }
+
+    .job p {
+      font-size: 1.2rem;
+      color: #dcdcdc;
+    }
+
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .skills-container div {
+      background-color: #333;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .skills-container div h4 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #ffcc00;
+    }
+
+    .skills-container div p {
+      font-size: 1.2rem;
+    }
+
+    #certifications {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    #certifications .cert {
+      background-color: #333;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      width: calc(33.333% - 30px);
+    }
+
+    #certifications .cert h4 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #ffcc00;
+    }
+
+    #certifications .cert p {
+      font-size: 1.2rem;
+      color: #dcdcdc;
+    }
+
+
+    #database-labs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    #database-labs .lab {
+      background-color: #333;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      width: calc(33.333% - 30px);
+    }
+
+    #database-labs .lab h4 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #ffcc00;
+    }
+
+    #database-labs .lab p {
+      font-size: 1.2rem;
+      color: #dcdcdc;
+    }
+
+    #contact {
+      text-align: center;
+    }
+
+    #contact .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 40px;
+    }
+
+    #contact a {
+      color: #ffffff;
+      font-size: 2rem;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+
+    #contact a:hover {
+      color: #ff6600;
+    }
+
+    #contact .contact-details p {
+      font-size: 3.1rem;
+      color: #dcdcdc;
+      margin: 10px 0;
+    }
+
+    .icon {
+      font-size: 3rem;
+      color: #ff6600;
+      transition: transform 0.3s ease;
+    }
+
+    .icon:hover {
+      transform: scale(1.2);
+    }
+
+    .pdf-link {
+      color: #ff6600;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .pdf-link:hover {
+      color: #cc5200;
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#labs">Labs</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>Kushal Patel</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#resume">Resume</a>
+      <a href="#work-experience">Work Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#database-labs"> projects </a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <!-- Home Section -->
-    <section id="home" class="parallax">
-        <div class="container">
-            <div class="intro fade-in">
-                <h1>Kushal's E-Portfolio</h1>
-                <p class="headline">Cybersecurity Specialist | Data Analyst | Cloud Enthusiast</p>
-                <p class="bio">Passionate about data security and cloud computing. Dedicated to continuous learning and problem-solving.</p>
-            </div>
-            <div class="photo slide-in">
-                <img src="profile.jpg" alt="Kushal's Photo">
-            </div>
-        </div>
-    </section>
+  <section id="about" class="section fadeIn">
+    <img src="C:\Users\KUSHAL\OneDrive\Desktop\Kushal8616.github.io/kushal.jpg" alt="Kushal Patel" class="profile-pic" />
+    <p>Hello, I'm Kushal Patel, I'm an aspiring cybersecurity professional with a strong foundation in network security, ethical hacking, and digital forensics. Currently studying computer security and investigations at Fleming college, I enjoy solving technical challenges and staying updated on the latest cyber threats. I'm passionate about helping organizations stay secure in a fast-changing digital world. I'm a curious learner, detail-oriented, and love diving deep into complex problems to find secure solutions.</p>
+  </section>
 
-    <!-- Resume Section -->
-    <section id="resume" class="fade-in">
-        <h2>Resume</h2>
-        <button id="resumeButton">View Resume</button>
-        <div id="resumeModal" class="modal">
-            <span class="close">&times;</span>
-            <iframe src="your-resume.pdf" width="100%" height="500px"></iframe>
-        </div>
-        <h3>Summary</h3>
-        <p>Experienced in Cybersecurity, Data Analytics, and Cloud Computing. Specializing in SQL, Splunk, and ELK stack.</p>
-    </section>
+  <section id="education" class="section fadeIn">
+    <h2 class="section-title">Education</h2>
+    <div class="skills-container">
+      <div>
+        <h4>Advanced Diploma </h4>
+        <p> fleming college </p>
+        <p> computer security and investigations (2024-present)</p>
+        <p> Currently studing computer security and investigations in fleming college, peterborough, ON</p>
+      </div>
+      <div>
+        <h4> SSC </h4>
+        <p> ST anne's high school </p>
+        <p> Gujarat secondary and higher secondary Education Board (2021-2022) </p>
+        <p> completed ssc board form st anne's high school from gujarat, india with good marks. </p>
+      </div>      
+  </section>
 
-    <!-- Labs Section -->
-    <section id="labs" class="fade-in">
-        <h2>Labs & Projects</h2>
-        <div class="lab">
-            <h3>SQL Database Management</h3>
-            <p>Description: Designed a relational database schema and optimized SQL queries for performance.</p>
-            <p>Tools: SQL, MySQL</p>
-            <a href="SQL_Lab_Report.pdf" target="_blank">Download Lab Report</a>
-        </div>
-        <div class="lab">
-            <h3>Splunk Data Analysis</h3>
-            <p>Description: Analyzed machine data with Splunk and created dashboards for anomaly detection.</p>
-            <p>Tools: Splunk</p>
-            <a href="Splunk_Lab_Report.pdf" target="_blank">Download Lab Report</a>
-        </div>
-        <div class="lab">
-            <h3>ELK Stack Visualization</h3>
-            <p>Description: Used Elasticsearch, Logstash, and Kibana (ELK) for data aggregation and custom dashboards.</p>
-            <p>Tools: ELK Stack</p>
-            <a href="ELK_Lab_Report.pdf" target="_blank">Download Lab Report</a>
-        </div>
-    </section>
+  <section id="summary" class="section fadeIn">
+    <h2 class="section-title">Summary</h2>
+    <p>
+      I am a dedicated and detail-oriented cybersecurity student with a strong interest in ethical hacking, network defense, and digital forensics. Currently pursuing my studies in cybersecurity, I have developed a solid understanding of key security concepts such as risk assessment, firewall configuration, system hardening, and vulnerability management. My academic background is supported by hands-on lab work, allowing me to apply theoretical knowledge in real-world scenarios.    </p>
+    <p>
+      Throughout my coursework, I have gained practical experience with industry-standard tools like Wireshark, Nmap, Metasploit, Kali Linux, and Burp Suite. I have completed projects involving penetration testing, secure database design, password cracking simulations, and packet analysis. I am also comfortable working in Windows and Linux environments and have explored scripting with Bash and PowerShell to automate security tasks and system monitoring.
+    </p>
+    <p>
+      My goal is to contribute to the cybersecurity field by helping organizations protect their digital assets and maintain secure infrastructures. I am continuously learning and staying updated on current threats, vulnerabilities, and mitigation techniques. I am particularly interested in roles related to security analysis, penetration testing, and incident response, and I look forward to bringing my skills and passion to a dynamic and challenging work environment.
+    </p>
+    <p><strong>Career Objective:</strong> To become a skilled penetration tester and security analyst, focusing on providing robust protection to businesses against emerging cyber threats.</p>
+  </section>
+  
 
-    <!-- Education Section -->
-    <section id="education" class="fade-in">
-        <h2>Education</h2>
-        <ul>
-            <li>
-                <h3>Bachelor of Science in Computer Science</h3>
-                <p>XYZ University, 2024</p>
-                <p>Relevant Coursework: Database Management, Cloud Computing, Cybersecurity</p>
-            </li>
-        </ul>
-    </section>
+  <section id="resume" class="section fadeIn">
+    <h2 class="section-title">Resume</h2>
+    <button onclick="window.open('resume.pdf', '_blank')">Open Resume</button>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="fade-in">
-        <h2>Contact</h2>
-        <div class="social-links">
-            <a href="https://github.com/kushal" target="_blank" class="social-link github">GitHub</a>
-            <a href="https://linkedin.com/in/kushal" target="_blank" class="social-link linkedin">LinkedIn</a>
-            <a href="mailto:kushal@example.com" class="social-link email">Email</a>
-        </div>
-    </section>
+  <section id="work-experience" class="section fadeIn">
+    <h2 class="section-title">Work Experience</h2>
+    <div class="job">
+      <h4>Cybersecurity Intern</h4>
+      <p>•	Assisted in monitoring and analyzing network traffic for potential threats.</p>
+      <p>•	Conducted vulnerability assessments and security audits.</p>
+      <p>•	Worked with the SOC team to identify and mitigate security risks.</p>
+    
+    </div>
+    <div class="job">
+      <h4>Tim hortons - crew member </h4>
+      <p> •  Provided excellent customer service, handled cash transactions, and prepared food and beverages in a fast-paced environment. </p>
+      <p> •  Collaborated with team members to ensure timely service and maintain a clean, organized workspace.</p>
+      <p> •    This experience helped me develop strong interpersonal skills, problem-solving abilities, and a customer-focused mindset.</p>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Kushal. All Rights Reserved.</p>
-    </footer>
+  <section id="skills" class="section fadeIn">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-container">
+      <div>
+        <h4>🔐 Cybersecurity & Networking</h4>
+        <p>Skilled in core cybersecurity principles such as the CIA Triad, risk assessment, and vulnerability management. Familiar with firewall configuration, VPNs, intrusion detection systems, and basic penetration testing. </p>
+      </div>
+      <div>
+        <h4>🧪 Tools & Technologies
+        </h4>
+        <p>Hands-on experience with Wireshark, Nmap, Metasploit, Burp Suite, and Autopsy. Comfortable using Kali Linux for ethical hacking and digital forensics tasks.
+        </p>
+      </div>
+      <div>
+        <h4>💻 Operating Systems & Scripting
+        </h4>
+        <p>Proficient in both Windows and Linux environments. Basic scripting knowledge in PowerShell, Bash, and Python for automating system tasks and analyzing logs.
+        </p>
+      </div>
+      <div>
+        <h4>🛡️ Security Practices</h4>
+        <p> Able to create clear technical reports, incident summaries, and lab documentation with screenshots and analysis. Skilled in using terminal outputs and logs for evidence.</p>
+      </div>
+      <div>
+        <h4>🌐 Web & Application Security
+        </h4>
+        <p>
+          Basic understanding of OWASP Top 10 threats such as SQL Injection and XSS. Performed web application testing using Burp Suite and browser tools.
+        </p>
+      </div>
+      <div>
+        <h4>☁️ Cloud & Virtualization
+        </h4>
+        <p> Familiar with basic cloud security concepts and virtualization using VirtualBox and VMware. Set up test environments and simulated attacks in virtual labs.
 
-    <script src="script.js"></script>
+        </p>      
+      </div>
+      <div>
+        <h4>🧠 Soft Skills & Teamwork
+        </h4>
+        <p> Detail-oriented and analytical thinker with strong troubleshooting abilities. Experienced in collaborating on technical projects and explaining findings clearly.
+
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" class="section fadeIn">
+    <h2 class="section-title">Certifications</h2>
+    <div class="cert">
+      <h4>CompTIA Security+</h4>
+      <p>Earned the globally recognized CompTIA Security+ certification, demonstrating knowledge in core security concepts, network architecture, risk management, cryptography, and incident response. This certification confirms my ability to assess the security posture of an enterprise environment and recommend and implement appropriate security solutions.
+      </p>
+    </div>
+    <div class="cert">
+      <h4>Basic Computer Skills Certificate
+      </h4>
+      <p>Completed foundational training in computer operations, file management, Microsoft Office tools, internet usage, and basic troubleshooting. This certificate strengthened my understanding of essential computer functions and laid the groundwork for more advanced IT and cybersecurity learning.
+      </p>
+    </div>
+  </section>
+
+  <section id="projects" class="section fadeIn">
+    <h2 class="section-title">projects </h2>  
+    <div class="skills-container">
+     <div class="lab">
+      <h4>SQL </h4>
+      <p>Completed hands-on labs focused on SQL database management and querying. Gained practical experience in writing complex SQL queries, performing data manipulation (INSERT, UPDATE, DELETE), and using joins to extract meaningful insights from relational databases. Applied normalization techniques to optimize database structure and ensure efficient data storage.</p>
+      <a class="pdf-link" href="SQL-Lab.pdf" target="_blank">View Lab</a>
+    </div>
+    <div class="lab">
+      <h4>Splunk </h4>
+      <p>Developed proficiency in using Splunk, a leading security information and event management (SIEM) tool, to analyze machine data and generate insightful reports. Configured Splunk to ingest, index, and search logs for monitoring network traffic, security events, and system performance. Gained experience in creating dashboards, setting up alerts, and identifying suspicious activities in logs.</p>
+    </div>
+    <div class="lab">
+      <h4>ELK Stack </h4>
+      <p>Worked with the ELK stack (Elasticsearch, Logstash, Kibana) to analyze, visualize, and search large datasets. Configured Logstash for log ingestion and data transformation, then used Elasticsearch for indexing and storing the data. Finally, created dynamic visualizations and dashboards in Kibana to present data in a user-friendly way. Gained insights into log aggregation, troubleshooting, and security monitoring.</p>
+    </div>
+    <div class="lab">
+      <h4>Penetration Testing & Vulnerability Assessment </h4>
+      <p>Conducted network scanning and penetration testing using Nmap and Metasploit. Discovered and mitigated security vulnerabilities in web applications. Developed security recommendations to strengthen network defences.</p>
+    </div>
+    <div class="lab"> 
+      <h4>Incident Response & Digital Forensics</h4>
+      <p> Investigated and analysed security incidents using Wireshark and forensic tools. Created detailed security incident reports and recommended mitigation strategies.
+        </p>
+    </div>
+    <div class="lab"> 
+      <h4>Secure Database Design </h4>
+      <p> Designed a MySQL database with encryption and access controls. Implemented audit logs to track user activities and detect anomalies.</p>
+      </div>
+    <div class="lab"> 
+      <h4>Network Vulnerability Assessment and Penetration Testing</h4>
+      <p>In this project, I conducted a network vulnerability assessment and penetration testing on a simulated corporate network environment. Using tools like Nmap, Metasploit, and Wireshark, I identified vulnerabilities, scanned for open ports, and attempted to exploit weaknesses in the network’s security setup. </p>
+    </div>
+    </div>    
+    </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section fadeIn">
+    <h1 class="section-title">Contact</h1>
+    <div class="contact-details">
+      <p>Email: <a href="mailto:kanjanap8616@gmail.com">Kanjanap8616@gmail.com</a></p>
+      <p>Phone: +1 (249) 688-3063</p>
+    </div>
+    <div class="social-icons">
+      <a href="https://twitter.com/kushal" target="_blank" class="icon">
+        <img src="C:\Users\KUSHAL\OneDrive\Desktop\Kushal8616.github.io/download.png" alt="Twitter" width="80" />
+      </a>
+      <a href="https://github.com/kushal8616" target="_blank" class="icon">
+        <img src="C:\Users\KUSHAL\OneDrive\Desktop\Kushal8616.github.io/github.png" alt="GitHub" width="100" />
+      </a>
+      <a href="https://instagram.com/kushal" target="_blank" class="icon">
+        <img src="C:\Users\KUSHAL\OneDrive\Desktop\Kushal8616.github.io\instagram.jpeg" alt="Instagram" width="80" />
+      </a>
+      <a href="https://LinkedIn.com/kushal" target="_blank" class="icon">
+        <img src="C:\Users\KUSHAL\OneDrive\Desktop\Kushal8616.github.io\LinkedIn.png" alt="LinkedIn" width="80" />
+      </a>
+    </div>
+  </section>
 </body>
 </html>
